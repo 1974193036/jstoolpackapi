@@ -48,7 +48,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Build
-        run: pnpm docs:build
+        run: BASE_URL='/${{ github.event.repository.name }}/' pnpm docs:build
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact

@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: process.env.BASE_URL || '/', // 默认 '/'
   lang: 'zh-CN',
   title: "jstoolpackapi",
   description: "this is jstoolpack api website",
