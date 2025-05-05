@@ -1,10 +1,13 @@
 import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
+
+const base = process.env.BASE_URL || '/' // 默认 '/'
+
 export default defineConfig({
-  base: process.env.BASE_URL || '/', // 默认 '/'
+  base,
   head: [
-    ['link', { rel: 'icon', href: '/favicon.svg' }]
+    ['link', { rel: 'icon', href: `${base}favicon.svg` }]
     // 其他 head 配置...
   ],
   lang: 'zh-CN',
