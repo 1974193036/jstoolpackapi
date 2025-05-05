@@ -49,10 +49,6 @@ jobs:
         run: pnpm install
       - name: Build
         run: pnpm docs:build
-      - name: Move built files to root directory and clean up
-        run: |
-          mv docs/.vitepress/dist/* ./dist
-          rm -rf docs/.vitepress/dist
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
